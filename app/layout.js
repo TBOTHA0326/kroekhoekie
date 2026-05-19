@@ -3,6 +3,7 @@ import './globals.css';
 export const metadata = {
   title: 'PassSmart – Study Summaries for SA Students',
   description: 'Crystal-clear CAPS-aligned study summaries for Grade 10, 11 & 12 students across South Africa. Study smarter, not harder.',
+  viewport: 'width=device-width, initial-scale=1',
 };
 
 export default function RootLayout({ children }) {

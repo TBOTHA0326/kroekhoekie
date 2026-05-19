@@ -521,7 +521,7 @@ footer { background: var(--navy); padding: 4.5rem 2.5rem 2rem; }
   .hero-content   { grid-template-columns: 1fr; }
   .hero-visual    { display: none; }
   .steps          { grid-template-columns: 1fr; }
-  .pricing-grid   { grid-template-columns: 1fr; }
+  .pricing-grid   { grid-template-columns: 1fr; max-width: 440px; margin-left: auto; margin-right: auto; }
   .pricing-card.feat { transform: none; }
   .testi-grid     { grid-template-columns: 1fr; }
   .included-grid  { grid-template-columns: 1fr; }
@@ -536,13 +536,70 @@ footer { background: var(--navy); padding: 4.5rem 2.5rem 2rem; }
   .nav-links a    { font-size: 1.2rem; }
   .hamburger      { display: flex; }
 }
+
 @media (max-width: 600px) {
-  section         { padding: 4rem 1.5rem; }
+  section         { padding: 4rem 1.25rem; }
   .footer-grid    { grid-template-columns: 1fr; }
-  .hero           { padding: 7rem 1.5rem 4rem; }
-  .trust-bar      { gap: 1rem; }
+  .hero           { padding: 7rem 1.25rem 4rem; }
+  .pricing-section{ padding: 4rem 1.25rem; }
+
+  /* Nav */
+  nav             { padding: 1rem 1.25rem; }
+  nav.scrolled    { padding: 0.7rem 1.25rem; }
+
+  /* Hero */
+  .hero-badge     { font-size: 0.75rem; padding: 0.4rem 0.9rem; }
+  .hero-desc      { font-size: 1rem; }
   .hero-btns      { flex-direction: column; }
-  .pricing-section{ padding: 4rem 1.5rem; }
+  .hero-btns a    { text-align: center; justify-content: center; }
+  .hero-stats     { gap: 1.25rem; flex-wrap: wrap; }
+  .stat-num       { font-size: 1.7rem; }
+
+  /* Trust bar */
+  .trust-bar      { gap: 0.75rem 1.5rem; padding: 1.1rem 1.25rem; justify-content: flex-start; }
+  .trust-item     { font-size: 0.78rem; }
+
+  /* Grade tabs — scrollable row on small screens */
+  .grade-tabs     { display: flex; overflow-x: auto; -webkit-overflow-scrolling: touch; scroll-snap-type: x mandatory; border-radius: var(--radius); padding: 0.4rem; width: 100%; }
+  .grade-tabs::-webkit-scrollbar { display: none; }
+  .grade-tab      { scroll-snap-align: start; flex-shrink: 0; padding: 0.6rem 1.3rem; font-size: 0.85rem; }
+
+  /* Subjects grid — 1 col */
+  .subjects-grid  { grid-template-columns: 1fr; }
+
+  /* Included section */
+  .preview-card   { padding: 1.5rem; }
+
+  /* Pricing — full width, no max-width clamp */
+  .pricing-grid   { max-width: 100%; }
+  .pricing-card   { padding: 1.75rem; }
+  .pricing-amt    { font-size: 2.8rem; }
+
+  /* Testimonials */
+  .testi-card     { padding: 1.5rem; }
+
+  /* FAQ */
+  .faq-q          { font-size: 0.88rem; padding: 1rem 1.1rem; }
+  .faq-item.open .faq-a { padding: 0 1.1rem 1rem; }
+
+  /* CTA band */
+  .cta-band       { padding: 4rem 1.25rem; }
+  .cta-band h2    { font-size: 2.2rem; }
+  .btn-white      { padding: 1rem 1.75rem; }
+
+  /* Footer */
+  footer          { padding: 3.5rem 1.25rem 1.5rem; }
+  .footer-bottom  { flex-direction: column; gap: 0.75rem; text-align: center; }
+
+  /* Modal */
+  .modal          { padding: 1.75rem 1.25rem; }
+  .modal h3       { font-size: 1.7rem; }
+
+  /* WhatsApp float — smaller on mobile so it doesn't cover content */
+  .wa-float       { width: 50px; height: 50px; font-size: 1.3rem; bottom: 1.25rem; right: 1.25rem; }
+
+  /* Steps */
+  .step           { padding: 0 0.5rem; }
 }
 
 /* ═══════════════════════════════════════════════
